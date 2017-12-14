@@ -174,11 +174,7 @@ const starRating = function(moves) {
 		currentRating = "1 star (fair)"
 		return currentRating;
 	}
-	else if (numMoves === 35) {
-		$('#star1').css('color','black');
-		currentRating = "no stars (terrible)"
-		return currentRating;
-	}
+
 };
 
 
@@ -189,7 +185,7 @@ const starRating = function(moves) {
 
 function get_elapsed_time_string(total_seconds) {
   function pretty_time_string(num) {
-    return ( num < 10 ? "0" : "" ) + num;
+    return ( num < 10 ? '0' : '' ) + num;
   }
 
   let hours = Math.floor(total_seconds / 3600);
@@ -206,7 +202,7 @@ function get_elapsed_time_string(total_seconds) {
   seconds = pretty_time_string(seconds);
 
   // Compose the string for display
-  let currentTimeString = hours + ":" + minutes + ":" + seconds;
+  let currentTimeString = hours + ':' + minutes + ':' + seconds;
 
   return currentTimeString;
 }
